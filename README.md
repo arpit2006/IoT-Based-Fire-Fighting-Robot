@@ -53,6 +53,45 @@ The main goal is to **reduce human risk** and enable **faster fire response** in
 ---
 
 ---
+## 🛠️ How to Make It
+
+### 🔹 Step 1: Assemble the Hardware
+1. Mount the **Arduino Uno** on the robot chassis.  
+2. Connect **flame sensor** and **temperature sensor** to analog pins of Arduino.  
+3. Connect **DC motors** to the **L298N motor driver**, and link the motor driver to Arduino.  
+4. Attach the **water pump** and connect it through a relay module or motor driver output.   
+5. Power the circuit using a **9V/12V battery**.
+
+---
+
+### 🔹 Step 2: Write and Upload the Code
+1. Open **Arduino IDE** on your computer.  
+2. Install required libraries (for DHT sensor, Blynk, or ThingSpeak).  
+3. Write or paste the Arduino C/C++ code for:  
+   - Reading flame and temperature sensor values  
+   - Activating motors and pump when fire is detected  
+   - Sending data to IoT platform via ESP8266  
+4. Select **Tools → Board → Arduino Uno** and upload the code.
+
+---
+
+### 🔹 Step 3: Connect to IoT Platform(Optional)
+1. Open **Blynk** or **ThingSpeak** and create a new project.  
+2. Get the **Auth Token / API Key**.  
+3. Add virtual pins in the Arduino code to send data (temperature, fire status).  
+4. Upload updated code with your IoT credentials.  
+5. Monitor live sensor data and robot status remotely.
+
+---
+
+### 🔹 Step 4: Test the Robot
+1. Place a small flame safely in front of the sensors (e.g., from a lighter).  
+2. Observe:  
+   - Flame sensor detects the fire.  
+   - Arduino activates motors and the water pump.  
+   - Data updates appear on the IoT dashboard.  
+
+---
 
 ## 📄 License
 This project is open-source and free to use for educational purposes.  
